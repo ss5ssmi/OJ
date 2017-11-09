@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-	int n,sum,t,c=0;
+	int n,c=0;
+	long long sum,t;
 	char s;
-	scanf("%d%d",&n,&sum);
+	scanf("%d%lld",&n,&sum);
 	while(n--) {
 		getchar();
-		scanf("%c %d",&s,&t);
+		scanf("%c %lld",&s,&t);
 		if(s=='-') {
 			if(t>sum) {
 				c++;
@@ -17,6 +18,6 @@ int main() {
 			sum+=t;
 		}
 	}
-	printf("%d %d\n",sum,c);
+	printf("%lld %d\n",sum,c);
 	return 0;
 }
