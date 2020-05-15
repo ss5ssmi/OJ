@@ -1,10 +1,18 @@
 #include<stdio.h>
+#include<math.h>
 int main(){
-	int t, k;
+	int t;
 	scanf("%d", &t);
 	while(t--){
-		scanf("%d", &k);
-		printf("%d\n", k%2==1?1:2);
+		int n, cnt = 1;
+		scanf("%d", &n);
+		for(int i=2;i<n;i++){
+			cnt += pow(2, i-1);
+			if(n%cnt==0){
+				printf("%d\n", n/cnt);
+				break;
+			} 
+		}
 	}
 	return 0;
 } 
